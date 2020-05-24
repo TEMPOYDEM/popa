@@ -46,7 +46,7 @@
       
       const apple = {
 	  x: parseInt(Math.random() * (cnv.width - 20) + 10 ),
-	  
+    
 	  y: parseInt(Math.random() * (cnv.height - 20) + 10 ),
 	  width: 7.5,
 	  height: 7.5,
@@ -74,6 +74,7 @@
 	  y: 0,
 	  speed: 1,
 	  width: pSize,
+    length: 10,
 	  height: pSize,
     dx: 20,
     dy: 0,
@@ -122,7 +123,7 @@ if (this.segments.length > this.length) {
 };
 
 
-	      ctx.fillStyle = 'red';
+	      ctx.fillStyle = 'Magenta';
 	  //     ctx.fillRect(this.x, this.y, this.width, this.height)
 	  // },
 
@@ -134,11 +135,17 @@ if (collides(this.segments[i], player) && !isGameOver) isGameOver = true;
       };
 
 const gameOver = () => {
-  ctx.fillStyle = '#eeeeee';
-  ctx.fillRect(0, 0, cnv.width, cnv.height);
 
-ctx.fillStyle = '#000000';
-ctx.fillRect(cnv.width / 2 - 150, cnv.height/ 2 - 50, 300, 100);
+alert('Game Over')
+
+
+
+
+//   ctx.fillStyle = '#eeeeee';
+//   ctx.fillRect(0, 0, cnv.width, cnv.height);
+
+// ctx.fillStyle = '#000000';
+// ctx.fillRect(cnv.width / 2 - 150, cnv.height/ 2 - 50, 300, 100);
 }
 
 
